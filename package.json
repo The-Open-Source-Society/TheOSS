@@ -1,0 +1,23 @@
+{
+  "name": "theoss",
+  "version": "1.0.0",
+  "description": "The Open Source Society Official Website",
+  "main": "index.js",
+  "dependencies": {
+    "tailwindcss": "^1.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushmankumar7/theOSS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayushmankumar7/theOSS/issues"
+  },
+  "homepage": "https://github.com/ayushmankumar7/theOSS#readme"
+}
