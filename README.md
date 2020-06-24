@@ -13,6 +13,9 @@ The Open Source Society(TOSS) Official website. (In Progress)
 5. Make your contribution :)
 
 
-# Dependencies 
+## Dependencies 
 1.Python3 (https://www.python.org/)
 
+## Libraries
+
+1. Flask (pip install flask)
