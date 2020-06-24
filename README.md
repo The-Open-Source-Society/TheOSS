@@ -1,8 +1,7 @@
 # TheOSS
 The Open Source Society(TOSS) Official website. (In Progress)
 
-<img src = "https://drive.google.com/file/d/19dl2kRhhJbgt5oYlipZTBXf6dsSWh2Ci/view?usp=sharing">
-
+![](extra/toss.png)
 ## Development
 
 
