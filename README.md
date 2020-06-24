@@ -12,3 +12,9 @@ The Open Source Society(TOSS) Official website. (In Progress)
 4. git checkout -b devBranch
 5. Make your contribution :)
 
+
+# Dependencies 
+1. Node JS
+(https://nodejs.org/en/)
+2. Python3 (https://www.python.org/)
+
