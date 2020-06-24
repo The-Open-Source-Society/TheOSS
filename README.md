@@ -14,7 +14,5 @@ The Open Source Society(TOSS) Official website. (In Progress)
 
 
 # Dependencies 
-1. Node JS
-(https://nodejs.org/en/)
-2. Python3 (https://www.python.org/)
+1.Python3 (https://www.python.org/)
 
