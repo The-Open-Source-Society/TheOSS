@@ -19,3 +19,7 @@ The Open Source Society(TOSS) Official website. (In Progress)
 ## Libraries
 
 1. Flask (pip install flask)
+
+### To run the Flask server
+
+python wsgi.py
