@@ -13,9 +13,9 @@ def login():
 
 @app.route("/login_val", methods =["GET","POST"])
 def login_valid():
-    email = request.form.get('username')
+    username = request.form.get('username')
     password = request.form.get('password')
-    return "email : {} password : {}".format(email,password)
+    return " Welcome username : {} ".format(username)
 
 @app.route("/contact")
 def contact():
