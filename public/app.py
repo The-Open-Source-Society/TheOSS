@@ -12,6 +12,7 @@ class RegisterForm(FlaskForm):
      username = StringField('Username', validators =[InputRequired(), Length(min=4, max=50)])
      email = StringField('Email ID', validators = [InputRequired(), Email(message='Invalid email'), Length(max=50)]) 
      password = PasswordField('Password', validators =[InputRequired(), Length(min=8, max=80)])
+
 app = Flask(__name__)
 
 @app.route("/")
