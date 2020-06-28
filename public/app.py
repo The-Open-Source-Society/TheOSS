@@ -1,8 +1,14 @@
 from flask import Flask, render_template, request
 import firebase_admin
-from firebase_admin import credentials
+from firebase import firebase
+from firebase_admin import credentials, firestore
 cred = credentials.Certificate("/home/arkaprabha/Desktop/theoss-a4460-firebase-adminsdk-hh09p-fd5a411e88.json")
-firebase_admin.initialize_app(cred)
+default_app = firebase_admin.initialize_app(cred)
+db = firestore.client()
+doc_ref = db.collection("User").document("Signup")
+
+
+
 
 app = Flask(__name__)
 
@@ -30,6 +36,7 @@ def signin_valid():
     username = request.form.get('name')
     password = request.form.get('password')
     email = request.form.get('email')
+    doc_ref.set({'Name':username,'Email':email,'Password':password})
     return " Welcome username : {} ".format(username)
 
 @app.route("/contact")
