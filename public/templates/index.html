@@ -6,13 +6,13 @@
     <title>The Open Source Society</title>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
 
     <!-- Vendor CSS Files -->
-    <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-    <link href="./assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="./assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/icofont/icofont.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/boxicons/aos/aos.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -21,7 +21,7 @@
     <section class="header">
         <div class="first-section">
             <div class="logo">
-                <img src="./assets/img/open-logo.png" alt="">
+                <img src="{{ url_for('static', filename='img/open-logo.png') }}" alt="">
             </div>
             <div class="custom-nav">
                 <nav>
@@ -53,25 +53,25 @@
         <div class="container">
             <div data-aos="flip-up" class="my-cards">
                 <div class="card crd" style="width: 18rem; border: none;">
-                    <img src="./assets/img/idk.png" class="card-img-top" alt="...">
+                    <img src="{{ url_for('static', filename='img/idk.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">I don't know</p>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem; border: none;">
-                    <img src="./assets/img/idk.png" class="card-img-top" alt="...">
+                    <img src="{{ url_for('static', filename='img/idk.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">Main nahi Jaanta</p>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem; border: none;">
-                    <img src="./assets/img/idk.png" class="card-img-top" alt="...">
+                    <img src="{{ url_for('static', filename='img/idk.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">Mujhe Nahi Pata</p>
                     </div>
                 </div>
                 <div class="card" style="width: 18rem; border: none;">
-                    <img src="./assets/img/idk.png" class="card-img-top" alt="...">
+                    <img src="{{ url_for('static', filename='img/idk.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">Ami Jaani Na</p>
                     </div>
@@ -84,7 +84,7 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, cumque soluta optio iste consequatur omnis assumenda obcaecati cum magnam, distinctio accusamus. Magnam quo dolor suscipit cupiditate quae, sed, nesciunt impedit non quisquam ipsam sit aliquam illo nihil. Deserunt sapiente quam dolor. Possimus.</p>
             </div>
             <div data-aos="fade-left" class="right">
-                <img src="./assets/img/innovation.jpg" alt="">
+                <img src="{{ url_for('static', filename='img/innovation.png') }}" alt="">
             </div>
         </div>
     </section>
@@ -95,15 +95,15 @@
     <section class="number-three">
         <div data-aos="fade-right" class="section-three-wrap">
             <div class="card-wrap">
-                <img src="./assets/img/dummy-img-1.png" alt="DUMMY IMAGE">
+                <img src="{{ url_for('static', filename='img/dummy-img-1.png') }}" alt="DUMMY IMAGE">
                 <h4>WEB DEVELOPMENT</h4>
             </div>
             <div class="card-wrap">
-                <img src="./assets/img/dummy-img-1.png" alt="DUMMY IMAGE">
+                <img src="{{ url_for('static', filename='img/dummy-img-1.png') }}" alt="DUMMY IMAGE">
                 <h4>COMPETITIVE PROGRAMMING</h4>
             </div>
             <div class="card-wrap">
-                <img src="./assets/img/dummy-img-1.png" alt="DUMMY IMAGE">
+                <img src="{{ url_for('static', filename='img/dummy-img-1.png') }}" alt="DUMMY IMAGE">
                 <h4>DATABASES</h4>
             </div>
         </div>
@@ -111,12 +111,12 @@
         <div class="my-container">
             <div data-aos="fade-left" class="events-wrap">
                 <div class="events">
-                    <img src="./assets/img/events-img.jpg" alt="EVENTS">
+                    <img src="{{ url_for('static', filename='img/events-img.jpg') }}" alt="EVENTS">
                     <h4>Exciting Upcoming Events</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ex facilis. Aut odit, facere at voluptatibus nesciunt ratione.</p>
                 </div>
                 <div class="events">
-                    <img src="./assets/img/contest-img.jpg" alt="EVENTS">
+                    <img src="{{ url_for('static', filename='img/contest-img.jpg') }}" alt="EVENTS">
                     <h4>Super Programming Contests</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ex facilis. Aut odit, facere at voluptatibus nesciunt ratione.</p>
                 </div>
@@ -141,13 +141,13 @@
 
 
     <!-- Main JavaScript Files -->
-    <script src="./assets/js/app.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
     <!-- Vendor JavaScript Files -->
-    <script src="./assets/vendor/jquery/jquery.min.js"></script>
-    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="./assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-    <script src="./assets/vendor/aos/aos.js"></script>
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/jquery-sticky/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
     <!-- Initialising AOS (Animate on Scroll) -->
     <script>
         AOS.init();
