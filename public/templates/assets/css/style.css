@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*******************************************/
+        /* FIRST SECTION (HEADER) */
+/******************************************/
+.first-section{
+    display: flex;
+    align-items: flex-start;
+    height: 100vh;
+}
+.first-section .logo img{
+    width: 620px;
+}
+.first-section .custom-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-left: 160px;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    padding: 10px;
+    padding-left: 55px;
+    border-radius: 0px 50px;
+}
+.first-section .custom-nav ul{
+    display: flex;
+    list-style: none;
+}
+.first-section .custom-nav ul li a{
+    margin-right: 55px;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+}
+.first-section .custom-nav ul li a:hover{
+    color: deeppink;
+}
+
+.custom-nav .login-btn a{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px 40px 10px;
+    background-color: black;
+    color: white; 
+    border-radius: 50px 50px;
+}
+.custom-nav .login-btn a:hover{
+    background: white;
+    color: deeppink;
+    border: 2px solid black;
+}
+
+
+/*******************************************/
+        /* SECOND SECTION */
+/******************************************/
+.card{
+    margin-right: 20px;
+}
+.card img{
+    border: none;
+    width: 130px;
+    margin-left: 20px;
+}
+.card .card-text{
+    font-size: 1.5rem;
+}
+.my-cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+.number-two .second{
+    border-top: 1px solid black;
+    padding: 60px 30px 55px;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.number-two .second .left{
+    width: 550px;
+}
+.number-two .second .left h1{
+    margin-bottom: 1.5rem;
+}
+.number-two .second .left p{
+    font-size: 20px;
+    text-align: justify;
+}
+.number-two .second .right img{
+    width: 450px;
+}
+
+
+/*******************************************/
+        /* THIRD SECTION */
+/******************************************/
+.number-three{
+    padding: 4rem;
+    height: 100vh;
+}
+.number-three .section-three-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.number-three .section-three-wrap .card-wrap h4{
+    text-align: center;
+    margin-top: 10px;
+}
+.number-three .events-wrap{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+}
+.number-three .events-wrap .events{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+}
+.number-three .events-wrap .events h4{
+    margin: 10px 2px;
+    text-align: center;
+}
+.number-three .events-wrap .events p{
+    padding: 0 35px 0px 50px;
+}
+
+/************************************/
+        /* FOOTER */
+/***********************************/
+footer{
+    margin-top: 20px;
+    padding: 2rem;
+    background: lightcyan;
+    text-align: center;
+}

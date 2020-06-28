@@ -22,3 +22,8 @@ The Open Source Society(TOSS) Official website. (In Progress)
 ### To run the Flask server
 
 python wsgi.py
+
+
+### CSS library used
+
+1. Tailwind CSS
