@@ -32,7 +32,8 @@ def signin_valid():
     username = request.form.get('name')
     password = request.form.get('password')
     email = request.form.get('email')
-    doc_ref = db.collection("User").document("Signup")
+    s = str(username)
+    doc_ref = db.collection("User").document(s)
     doc_ref.set({'Name':username,'Email':email,'Password':password})
     return " Welcome username : {} ".format(username)
 
