@@ -25,11 +25,13 @@ def login_valid():
 def signin():
     return render_template("signup.html")
 
-@app.route("/signin_val", methods =["GET","POST"])
+@app.route("/signup_val", methods =["GET","POST"])
 def signin_valid():
-    username = request.form.get('username')
+    username = request.form.get('name')
     password = request.form.get('password')
+    email = request.form.get('email')
     return " Welcome username : {} ".format(username)
+
 @app.route("/contact")
 def contact():
     
