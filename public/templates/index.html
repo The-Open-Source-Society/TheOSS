@@ -3,8 +3,161 @@
 
 {% block body %}
 
-<h1>Welcome to The Open Source Society</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Open Source Society</title>
 
-<h2>and yeah, you're Website is working fine! :)</h2>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/icofont/icofont.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/boxicons/aos/aos.css') }}" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <section class="header">
+        <div class="first-section">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/open-logo.png') }}" alt="">
+            </div>
+            <div class="custom-nav">
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="login-btn"><a href="/login">Login</a></div>
+                 <div class="login-btn"><a href="/signup">Signup</a></div>
+            </div>
+        </div>
+        <!--<div class="second-section">
+            <div class="header-svg-anim">
+            </div>
+            <div class="header-text">
+                <h1>SOME BOLD TEXT</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil consequuntur velit autem, laudantium et, reiciendis sint atque voluptatem labore ullam voluptates vel, nemo accusantium praesentium ut possimus perspiciatis architecto corrupti nam!</p>
+            </div>
+        </div>-->
+    </section>
+    <!-- Header Section End -->
+
+
+    <!-- SECOND SECTION -->
+    <section class="number-two">
+        <div class="container">
+            <div data-aos="flip-up" class="my-cards">
+                <div class="card crd" style="width: 18rem; border: none;">
+                    <img src="{{ url_for('static', filename='img/idk.png') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">I don't know</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; border: none;">
+                    <img src="{{ url_for('static', filename='img/idk.png') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Main nahi Jaanta</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; border: none;">
+                    <img src="{{ url_for('static', filename='img/idk.png') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Mujhe Nahi Pata</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; border: none;">
+                    <img src="{{ url_for('static', filename='img/idk.png') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Ami Jaani Na</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second">
+            <div data-aos="fade-right" class="left">
+                <h1>Again Some Bold Text</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, cumque soluta optio iste consequatur omnis assumenda obcaecati cum magnam, distinctio accusamus. Magnam quo dolor suscipit cupiditate quae, sed, nesciunt impedit non quisquam ipsam sit aliquam illo nihil. Deserunt sapiente quam dolor. Possimus.</p>
+            </div>
+            <div data-aos="fade-left" class="right">
+                <img src="{{ url_for('static', filename='img/innovation.png') }}" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- SECOND SECTION END -->
+
+
+    <!-- THIRD SECTION -->
+    <section class="number-three">
+        <div data-aos="fade-right" class="section-three-wrap">
+            <div class="card-wrap">
+                <img src="{{ url_for('static', filename='img/dummy-img-1.png') }}" alt="DUMMY IMAGE">
+                <h4>WEB DEVELOPMENT</h4>
+            </div>
+            <div class="card-wrap">
+                <img src="{{ url_for('static', filename='img/dummy-img-1.png') }}" alt="DUMMY IMAGE">
+                <h4>COMPETITIVE PROGRAMMING</h4>
+            </div>
+            <div class="card-wrap">
+                <img src="{{ url_for('static', filename='img/dummy-img-1.png') }}" alt="DUMMY IMAGE">
+                <h4>DATABASES</h4>
+            </div>
+        </div>
+
+        <div class="my-container">
+            <div data-aos="fade-left" class="events-wrap">
+                <div class="events">
+                    <img src="{{ url_for('static', filename='img/events-img.jpg') }}" alt="EVENTS">
+                    <h4>Exciting Upcoming Events</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ex facilis. Aut odit, facere at voluptatibus nesciunt ratione.</p>
+                </div>
+                <div class="events">
+                    <img src="{{ url_for('static', filename='img/contest-img.jpg') }}" alt="EVENTS">
+                    <h4>Super Programming Contests</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ex facilis. Aut odit, facere at voluptatibus nesciunt ratione.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- THIRD SECTION END -->
+
+
+    <!-- FOOTER -->
+    <footer>
+        <h3>The Open Source Society</h1>
+        <p>Copyright © TOSS. All Rights Reserved.</p>
+        <div class="footer-icons">
+            <a href="#"><i class='bx bxl-facebook-circle bx-md' style='color:#3862d8;'></i></a>
+            <a href="#"><i class='bx bxl-linkedin-square bx-md' style='color:#2967d8'></i></a>
+            <a href="#"><i class='bx bxl-instagram bx-md' style='color:#da4f79'></i></a>
+            <a href="#"><i class='bx bxl-github bx-md' style="color: black;"></i></a>
+        </div>
+    </footer>
+    <!-- FOOTER End -->
+
+
+    <!-- Main JavaScript Files -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <!-- Vendor JavaScript Files -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/jquery-sticky/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+    <!-- Initialising AOS (Animate on Scroll) -->
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
 
 {% endblock %}
