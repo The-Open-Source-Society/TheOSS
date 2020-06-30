@@ -1,3 +1,9 @@
+
+{% extends "layout.html" %}
+
+
+{% block body %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,15 +35,15 @@
                         <li><a href="#">About</a></li>
                         <li><a href="#">Events</a></li>
                         <li><a href="#">Team</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
                     </ul>
                 </nav>
-                <div class="login-btn"><a href="#">Login</a></div>
+                <div class="login-btn"><a href="/login">Login</a></div>
+                 <div class="login-btn"><a href="/signup">Signup</a></div>
             </div>
         </div>
         <!--<div class="second-section">
             <div class="header-svg-anim">
-
             </div>
             <div class="header-text">
                 <h1>SOME BOLD TEXT</h1>
@@ -154,3 +160,6 @@
     </script>
 </body>
 </html>
+
+{% endblock %}
+
