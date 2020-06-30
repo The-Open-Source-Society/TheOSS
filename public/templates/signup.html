@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body%}
+<div class="container">
+
+<form class="form-signup" method = "post" action="/signup_val"  >
+  <h1>Sign up</h1><br/>
+
+  <span class="input"></span>
+  <input type="text" name = "name" placeholder="Full name" title="Should be unique eg:johnsmith007" autofocus autocomplete="off" required pattern="^\w+\s\w+$" />
+  <span class="input"></span>
+  <input type="email" name="email" placeholder="Email address" required />
+  <span id="passwordMeter"></span>
+  <input type="password" name="password" id="password" placeholder="Password" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter" required pattern="(?=^.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"/>
+
+  <button type="submit" value="Sign Up" title="Submit form" class="btn btn-lg btn-primary btn-block"><span>Sign up</span></button>
+</form>
+</div> <!-- /container -->
+{% endblock %}
