@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, request, redirect, url_for
 import firebase_admin
 from firebase import firebase
@@ -21,6 +22,19 @@ cred = credentials.Certificate("/home/arkaprabha/Desktop/theoss-a4460-firebase-a
 default_app = firebase_admin.initialize_app(cred)
 db = firestore.client()
 
+from flask import Flask, render_template, request
+
+
+try:
+    import firebase_admin
+    from firebase import firebase
+    from firebase_admin import credentials, firestore
+    cred = credentials.Certificate("/home/arkaprabha/Desktop/theoss-a4460-firebase-adminsdk-hh09p-fd5a411e88.json")
+
+    default_app = firebase_admin.initialize_app(cred)
+    db = firestore.client()
+except:
+    pass
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY") or os.urandom(24)
 client = WebApplicationClient(GOOGLE_CLIENT_ID)
@@ -29,6 +43,10 @@ def get_google_provider_cfg():
     return requests.get(GOOGLE_DISCOVERY_URL).json()
 
 @app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route("/sign")
 def home():
     return render_template("toss.html")
 

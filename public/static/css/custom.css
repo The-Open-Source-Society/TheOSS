@@ -42,7 +42,7 @@
     color: deeppink;
 }
 
-.custom-nav .login-btn a{
+/*.custom-nav .login-btn button{
     background-color: black;
     color: white;
     text-decoration: none;
@@ -52,12 +52,11 @@
     color: white; 
     border-radius: 50px 50px;
 }
-.custom-nav .login-btn a:hover{
+.custom-nav button:hover{
     background: white;
     color: deeppink;
     border: 2px solid black;
-}
-
+}*/
 
 /*******************************************/
         /* SECOND SECTION */
@@ -98,7 +97,6 @@
 .number-two .second .right img{
     width: 450px;
 }
-
 
 /*******************************************/
         /* THIRD SECTION */
