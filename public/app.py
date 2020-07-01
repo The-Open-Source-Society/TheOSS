@@ -18,9 +18,9 @@ GOOGLE_DISCOVERY_URL = (
 )
 
 
-cred = credentials.Certificate("/home/arkaprabha/Desktop/theoss-a4460-firebase-adminsdk-hh09p-fd5a411e88.json")
-default_app = firebase_admin.initialize_app(cred)
-db = firestore.client()
+# cred = credentials.Certificate("/home/arkaprabha/Desktop/theoss-a4460-firebase-adminsdk-hh09p-fd5a411e88.json")
+# default_app = firebase_admin.initialize_app(cred)
+# db = firestore.client()
 
 from flask import Flask, render_template, request
 
