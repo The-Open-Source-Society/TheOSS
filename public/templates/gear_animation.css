@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin:0;
+}
+#rotating
+{   
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index:-1000;
+}
+#quote{
+font-size:30px;
+text-transform: capitalize;
+color:transparent;
+display:block;
+margin-top: 10px;
+animation: autotext 2s forwards ease-in 2s;
+}
+@keyframes autotext{
+    to{
+        color:brown;
+    }
+}
+
+
+#rotate{
+    height:150px;
+    width: 150px;
+    transform: rotate(0deg);
+    animation: rotate 2s infinite forwards ease-in 2s;
+}
+#rotate1{
+    height:100px;
+    width: 100px;
+    margin-left: 40px;
+    transform: rotate(0deg);
+    animation: rotate1 2s infinite forwards ease-in 2s;
+}
+@keyframes  rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes  rotate1{
+    to{
+        transform: rotate(-360deg);
+    }
+}
+#settings1
+{
+    height: 150px;
+    width:150px;
+    fill-opacity: 0;
+    stroke:#000;
+    stroke-width: 5px;
+    animation: settingcolor 1.5s ease-in forwards 1.2s;
+}
+#settings2
+{
+    height: 100px;
+    width:100px;
+    fill-opacity: 0;
+    stroke:#000;
+    stroke-width: 5px;
+    animation: settingcolor 1.5s ease-in forwards 1.2s;
+}
+
+@keyframes settingcolor{
+    to{
+        fill-opacity: 1;
+        fill:pink;
+        stroke:pink;
+    }
+}
+#settings1 path:nth-child(1)
+{
+    stroke-dasharray: 3000px;
+    stroke-dashoffset: 3000px;
+    animation: settings 2s ease-in forwards;
+}
+#settings2 path:nth-child(1)
+{
+    stroke-dasharray: 3000px;
+    stroke-dashoffset: 3000px;
+    animation: settings 2s ease-in forwards;
+}
+@keyframes settings{
+    to{
+        stroke-dashoffset: 0px;
+        fill:pink;
+    }
+}
+@media screen and (min-width:1280px)
+{
+    #quote{
+        font-size:45px;
+        display: block;
+    }
+}
+@media screen and (min-width:700px)
+{
+    #quote{
+        font-size:40px;
+        display: block;
+    }
+}
+@media screen and (min-width:480px)
+{
+    #quote{
+        font-size:20px;
+        display: block;
+    }
+}
