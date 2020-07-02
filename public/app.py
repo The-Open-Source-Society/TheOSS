@@ -74,17 +74,24 @@ def callback():
 
 @app.route("/login_val", methods =["GET","POST"])
 def login_valid():
-    username = request.form.get('username')
+    email = request.form.get('email')
     password = request.form.get('password')
-    return " Welcome username : {} ".format(username)
+    password = password
+    p = str(email)
+    doc = db.collection('User').document(p).get()
+    res = doc.get("Password")
+    if(password == res): 
+        return "Success"
+    else:
+        return "password or email do not match"
 
 
 @app.route("/signup_val", methods =["GET","POST"])
 def signin_valid():
     password = request.form.get('new_pass')
     conf_pass = request.form.get('con_pass')
-    ns = str(password)
-    cs = str(conf_pass)
+    ns = password
+    cs = conf_pass
     email = request.form.get('email')
     s = str(email)
     if ns == cs:
@@ -104,7 +111,7 @@ def signupgoogle():
         redirect_uri=request.base_url + "/callback",
         scope=["openid", "email", "profile"],
     )
-    return redirect(request_uri)
+    return redirect(request_uri(""))
 
 @app.route("/signup_with_google/callback")
 def signupcallback():
