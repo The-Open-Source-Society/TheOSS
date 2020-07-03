@@ -2,6 +2,10 @@
 from flask import Flask, render_template, request, redirect, url_for
 import firebase_admin
 
+from firebase import firebase
+from firebase_admin import credentials, credentials, firestore
+from oauthlib.oauth2 import WebApplicationClient
+
 import requests
 import json
 import os
@@ -20,19 +24,8 @@ GOOGLE_DISCOVERY_URL = (
 # default_app = firebase_admin.initialize_app(cred)
 # db = firestore.client()
 
-from flask import Flask, render_template, request
 
 
-try:
-    from firebase import firebase
-    from firebase_admin import credentials, firestore
-    from oauthlib.oauth2 import WebApplicationClient
-    cred = credentials.Certificate("/home/arkaprabha/Desktop/theoss-a4460-firebase-adminsdk-hh09p-fd5a411e88.json")
-
-    default_app = firebase_admin.initialize_app(cred)
-    db = firestore.client()
-except:
-    pass
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY") or os.urandom(24)
 client = WebApplicationClient(GOOGLE_CLIENT_ID)
@@ -43,14 +36,6 @@ def get_google_provider_cfg():
 @app.route("/")
 def index():
     return render_template("index.html")
-
-@app.route("/sign")
-def home():
-    return render_template("toss.html")
-
-@app.route("/login")
-def login():
-       return render_template("login.html")
 
 @app.route("/login_with_google")
 def logingoogle():
@@ -92,23 +77,32 @@ def callback():
 
 @app.route("/login_val", methods =["GET","POST"])
 def login_valid():
-    username = request.form.get('username')
+    email = request.form.get('email')
     password = request.form.get('password')
-    return " Welcome username : {} ".format(username)
+    password = password
+    p = str(email)
+    doc = db.collection('User').document(p).get()
+    res = doc.get("Password")
+    if(password == res): 
+        return "Success"
+    else:
+        return "password or email do not match"
 
-@app.route("/signup")
-def signin():
-    return render_template("signup.html")
 
 @app.route("/signup_val", methods =["GET","POST"])
 def signin_valid():
-    username = request.form.get('name')
-    password = request.form.get('password')
+    password = request.form.get('new_pass')
+    conf_pass = request.form.get('con_pass')
+    ns = password
+    cs = conf_pass
     email = request.form.get('email')
     s = str(email)
-    doc_ref = db.collection("User").document(s)
-    doc_ref.set({'Name':username,'Email':email,'Password':password})
-    return " Welcome username : {} ".format(username)
+    if ns == cs:
+       doc_ref = db.collection("User").document(s)
+       doc_ref.set({'Email':email,'Password':password})
+       return " Welcome username : {} ".format(email)
+    else:
+        redirect(url_for("/signup"))
 
 
 @app.route("/signup_with_google")
@@ -120,7 +114,7 @@ def signupgoogle():
         redirect_uri=request.base_url + "/callback",
         scope=["openid", "email", "profile"],
     )
-    return redirect(request_uri)
+    return redirect(request_uri(""))
 
 @app.route("/signup_with_google/callback")
 def signupcallback():

@@ -69,7 +69,7 @@
     
                 <!--Body-->
                 <div class="modal-body container">
-                  <form class="loginpage">
+                  <form class="loginpage" action = "/login_val">
                     <!-- social pages -->
                     <div class="social-title">
                       <h2 class="title text-center font-bold text-3xl my-8 text-pink-600">Login with</h2>
@@ -86,12 +86,12 @@
                     <div class="row text-center text-3xl">
                       <div class="username col-md-12">
                         <span class="glyphicon glyphicon-envelope text-5xl text-gray-600 mr-12"></span>
-                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="email" placeholder="Enter your email" required="email">
+                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="email" placeholder="Enter your email" name = 'email'required="email">
                       </div>
   
                       <div class="passowrd col-md-12 my-4">
                         <span class="glyphicon glyphicon-lock text-5xl text-gray-600 mr-12"></span>
-                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="password" placeholder="Enter your password" required="password"><br>                      
+                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="password" placeholder="Enter your password" name = "password" required="password"><br>                      
                       </div>                     
                     </div>
                     <div class="checkbox">
@@ -122,23 +122,29 @@
               <div class="tab-pane fade" id="panel8" role="tabpanel">
                 <div class="modal-body container">
                   <!-- body-->
-                  <form>
+                  <form class = "signupform" method = "post" action = "/signup_val">
                     <h2 class="text-center text-3xl font-bold my-8 text-pink-600">Sign up with us!</h2>
                     <!--sign up info-->
+                    <div class="row block mx-auto w-3/6">
+                          <a class="col-xs-4 col-md-4 col-lg-4 hover:bg-gray-300 hover:shadow-sm" href="/signup_with_google"><img src="{{ url_for('static', filename='img/gmail.png') }}"></a>
+                          <a class="col-xs-4 col-md-4 col-lg-4 hover:bg-gray-300 hover:shadow-sm" href="#"><img src="{{ url_for('static', filename='img/git.png') }}"></a>
+                          <a class="col-xs-4 col-md-4 col-lg-4 hover:bg-gray-300 hover:shadow-sm" href="#"><img src="{{ url_for('static', filename='img/linked.png') }}"></a>
+                      </div>
+                      <h2 class="text-center text-3xl font-bold my-5 text-pink-600">or</h2>
                     <div class="row text-center text-3xl">
                       <div class="username col-md-12">
                         <span class="glyphicon glyphicon-envelope text-gray-600 text-5xl mr-12"></span>
-                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="email" placeholder="Enter email" required="">
+                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="email" name = "email" placeholder="Enter email" required="email">
                       </div>
   
                       <div class="passowrd col-md-12 my-4">
                         <span class="glyphicon glyphicon-lock text-gray-600 text-5xl mr-12"></span>
-                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="password" placeholder="Enter password" required="">
+                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="password" name = "new_pass" placeholder="Enter password" required="password">
                         
                       </div>
                       <div class="repeat-passowrd col-md-12 mt-4 mb-8">
                         <span class="glyphicon glyphicon-lock text-5xl text-gray-600 mr-12"></span>
-                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="password" placeholder="Repeat password" required="">                        
+                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="password" name = "con_pass" placeholder="Repeat password" required="password">                        
                       </div>
                     </div>
                     <div class="text-center">
@@ -146,7 +152,7 @@
                     </div>
                     <div class="modal-footer">
                       <div class="text-center block mx-auto w-3/6">
-                        <p class="text-gray-700">Already a member? Log in!</p>
+                      <p class="text-gray-700">Already a member? Log in!</p>
                       </div>
                     </div>
                   </form>
