@@ -1,9 +1,7 @@
 
 from flask import Flask, render_template, request, redirect, url_for
 import firebase_admin
-from firebase import firebase
-from firebase_admin import credentials, firestore
-from oauthlib.oauth2 import WebApplicationClient
+
 import requests
 import json
 import os
@@ -26,9 +24,9 @@ from flask import Flask, render_template, request
 
 
 try:
-    import firebase_admin
     from firebase import firebase
     from firebase_admin import credentials, firestore
+    from oauthlib.oauth2 import WebApplicationClient
     cred = credentials.Certificate("/home/arkaprabha/Desktop/theoss-a4460-firebase-adminsdk-hh09p-fd5a411e88.json")
 
     default_app = firebase_admin.initialize_app(cred)
