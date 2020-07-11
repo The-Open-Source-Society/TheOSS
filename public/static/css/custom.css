@@ -15,9 +15,15 @@
     height: 100vh;
 }
 .first-section .logo img{
-    width: 620px;
+    
+    
+    top:-30px;
+    width: 550px;
+    
 }
 .first-section .custom-nav{
+    position: absolute;
+    right:0;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -26,21 +32,24 @@
     border-left: 2px solid black;
     padding: 10px;
     padding-left: 55px;
-    border-radius: 0px 50px;
+    border-radius:0px 0px 0px 50px;
+    background-color: #fff;
 }
 .first-section .custom-nav ul{
     display: flex;
     list-style: none;
 }
 .first-section .custom-nav ul li a{
-    margin-right: 55px;
-    font-size: 1.5rem;
+    margin-right: 65px;
+    font-size: 1.6rem;
     color: black;
     text-decoration: none;
 }
 .first-section .custom-nav ul li a:hover{
     color: deeppink;
 }
+
+
 
 /*.custom-nav .login-btn button{
     background-color: black;
@@ -139,7 +148,194 @@
 footer{
     margin-top: 20px;
     padding: 2rem;
-    background: lightcyan;
+    background:lightcyan;
     text-align: center;
 }
 
+/*svg animation*/
+#rotating
+{   position: relative;
+    justify-content: center;
+    align-items: center;
+    height:400px;    
+}
+#quote{
+font-size:30px;
+text-transform: capitalize;
+color:transparent;
+display:block;
+margin-top: 10px;
+-webkit-animation: autotext 2s forwards ease-in 2s;
+}
+@-webkit-keyframes autotext{
+    to{
+        color:brown;
+    }
+}
+
+#rotate,#rotate1,#quote{
+    position: absolute;
+}
+#rotate{
+    top:0;
+    left:45%;
+    height:150px;
+    width: 150px;
+    transform: translate(-50%,-50%);
+    margin: auto;
+    transform: rotate(0deg);
+    -webkit-animation: rotate 2s infinite forwards ease-in 2s;
+}
+#rotate1{
+    height:100px;
+    width: 100px;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+    transform: rotate(0deg);
+    -webkit-animation: rotate1 2s infinite forwards ease-in 2s;
+}
+#quote{
+    bottom:0;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}
+@-webkit-keyframes  rotate{
+    to{
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rotate1{
+    to{
+        transform: rotate(-360deg);
+    }
+}
+#settings1
+{
+    height: 150px;
+    width:150px;
+    fill-opacity: 0;
+    stroke:#000;
+    stroke-width: 5px;
+    -webkit-animation: settingcolor 1.5s ease-in forwards 1.2s;
+}
+#settings2
+{
+    height: 100px;
+    width:100px;
+    fill-opacity: 0;
+    stroke:#000;
+    stroke-width: 5px;
+    -webkit-animation: settingcolor 1.5s ease-in forwards 1.2s;
+}
+
+@-webkit-keyframes settingcolor{
+    to{
+        fill-opacity: 1;
+        fill:pink;
+        stroke:pink;
+    }
+}
+#settings1 path:nth-child(1)
+{
+    stroke-dasharray: 3000px;
+    stroke-dashoffset: 3000px;
+    -webkit-animation: settings 2s ease-in forwards;
+}
+#settings2 path:nth-child(1)
+{
+    stroke-dasharray: 3000px;
+    stroke-dashoffset: 3000px;
+    -webkit-animation: settings 2s ease-in forwards;
+}
+@-webkit-keyframes settings{
+    to{
+        stroke-dashoffset: 0px;
+        fill:pink;
+    }
+}
+@media screen and (min-width:1280px)
+{
+    #quote{
+        font-size:45px;
+        display: block;
+    }
+    .first-section .logo img{
+        position: absolute;
+        left:0;
+        transform: scale(1.5);
+        
+    }
+    
+}
+@media screen and (min-width:700px)
+{
+    #quote{
+        font-size:40px;
+        display: block;
+    }
+    .first-section .logo img{
+        position: absolute;
+        left:0;
+        transform: scale(1.2);
+        
+        
+    }
+    
+}
+@media screen and (min-width:480px)
+{
+    #quote{
+        font-size:20px;
+        display: block;
+    }
+    .first-section .logo img{
+        position: absolute;
+        left:0;
+        transform: scale(0.8);
+
+        
+    }
+}
+#nav2{
+    transition: 0.4s;
+    top:-55px;
+    
+}
+#button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nav3{
+    left:-20%;
+    transition: 0.6s;
+}
+#card1{
+    position: absolute;
+    right:3%;
+    top:30%;
+    background-color: transparent;
+    height:350px;
+    width:450px;
+}
+#card{
+    
+    height:320px;
+    width:450px;
+}
+#card h1{
+    border-left:2px solid deeppink;
+}
+#card2{
+  height:380px ;
+  top:-40px;
+  left:40px;
+}
+#card3{
+    height: 350px;
+    top:0;
+    right:30px;
+}

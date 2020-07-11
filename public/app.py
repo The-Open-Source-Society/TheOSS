@@ -1,10 +1,14 @@
 
 from flask import Flask, render_template, request, redirect, url_for
-import firebase_admin
+
 try:
+    import firebase_admin
+
     from firebase import firebase
     from firebase_admin import credentials, credentials, firestore
     from oauthlib.oauth2 import WebApplicationClient
+
+
 except:
     pass
 
@@ -32,7 +36,9 @@ GOOGLE_DISCOVERY_URL = (
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY") or os.urandom(24)
 try:
+
     client = WebApplicationClient(GOOGLE_CLIENT_ID)
+
 except:
     pass
 def get_google_provider_cfg():
