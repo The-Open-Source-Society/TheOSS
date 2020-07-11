@@ -13,22 +13,39 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
-
+  
     <!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='vendor/icofont/icofont.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='vendor/boxicons/aos/aos.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css">
 
 </head>
-<body>
-
+<body id="body">
+  
     <!-- Header Section -->
+   
     <section class="header">
         <div class="first-section">
-            <div class="logo">
+       <div id="nav2" class="h-20 w-full bg-gray-300 fixed z-20 shadow-md">
+      <svg id="on" class="m-2" height="30" width="30" viewbox="-5 -10 50 50 ">
+      <line x1="0" y1="5" x2="45" y2="5" stroke="#e84393" stroke-width="5px"></line>
+      <line x1="0" y1="20" x2="45" y2="20" stroke="#e84393" stroke-width="5px"></line>
+      <line x1="0" y1="35" x2="45" y2="35" stroke="#e84393" stroke-width="5px"></line>
+      </svg>
+    <div class="flex-2">
+      <h1 class="absolute top-0 right-0 mx-24 my-4 justify-around text-3xl capitalize text-red-400">the open source socierty</h1>
+      <img class="absolute  top-0 right-0  h-16 w-16 mx-3 my-1" src="{{ url_for('static', filename='img/open-source-black.png') }}" alt="">
+      </div>
+      </div>
+      <div class="logo" class="absolute">
                 <img src="{{ url_for('static', filename='img/open-logo.png') }}" alt="">
             </div>
+             <div class="flex flex-col">
             <div class="custom-nav">
                 <nav>
                     <ul class="nav-list">
@@ -38,10 +55,162 @@
                         <li><a href="/contact">Contact Us</a></li>
                     </ul>
                 </nav>
-                <div class="login-btn"><a href="/login">Login</a></div>
-                 <div class="login-btn"><a href="/signup">Signup</a></div>
+                <button class="btn btn-primary btn-md btn-rounded bg-gray-700 text-white hover:bg-gray-800 hover:border-2 hover:border-pink-600" data-toggle="modal" data-target="#login">Login</button>
+              </div>
+              <div id="card1">
+              <div  id="card2" class=" w-10 bg-blue-400 absolute z-0 shadow-2xl"></div>
+              <div  id="card3" class=" w-24 bg-blue-400 absolute z-0 shadow-2xl"></div>
+              <div id="card" class=" stroke-1 border-2 bg-white absolute shadow-2xl z-10">
+              <h1 class="capitalize px-2 py-2 text-4xl block text-pink-500 m-5 ">Some bold text</h1>
+              <p class="px-5  text-2xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, cumque soluta optio iste consequatur omnis assumenda obcaecati cum magnam, distinctio accusamus. Magnam quo dolor suscipit cupiditate quae, sed, nesciunt impedit non quisquam ipsam sit aliquam illo nihil. Deserunt sapiente quam dolor. Possimus.</p>
+              </div>
+              </div>             
+              </div>  
+              <!--side navbar-->
+             <div id="nav3" class="left-0 z-30 w-1/5 s h-full bg-gray-300 shadow-lg fixed ">
+                <svg id="off"class="float-right m-3"height="15" width="15" viewbox="0 0 10 10">
+                <line x1="0" y1="0" x2="10" y2="10" stroke="#000" stroke-width="1"></line>
+                <line x1="10" y1="0" x2="0" y2="10" stroke="#000" stroke-width="1"></line>
+
+                </svg>
+                <div class="my-20">
+                <nav class="my-20">
+                    <ul class="text-center  no-underline ">
+                        <li class="py-5 text-3xl hover:bg-yellow-400 hover:text-white"><a class="capitalize list-none  hover:text-white" href="#">About</a></li>
+                        <li class="py-5 text-3xl hover:bg-yellow-400 hover:text-white"><a class="capitalize list-none  hover:text-white"  href="#">Events</a></li>
+                        <li class="py-5 text-3xl hover:bg-yellow-400 hover:text-white"><a class="capitalize list-none  hover:text-white" href="#">Team</a></li>
+                        <li class="py-5 text-3xl hover:bg-yellow-400 hover:text-white"><a class="capitalize list-none  hover:text-white" href="/contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div id="button"><button  class="btn btn-primary btn-md btn-rounded bg-gray-700 text-white hover:bg-gray-800 hover:border-2 hover:border-pink-600" data-toggle="modal" data-target="#login">Login</button>
+              </div>
+              <div class="my-10 flex justify-center align-items-center ">
+            <p class="text-xl tracking-wider">Not a Member?</p><p class="text-xl text-blue-700 capitalize mx-1 pointer">sign up</p>
+              </div>
+              </div></div>
             </div>
-        </div>
+	          <!--side navbar ends-->
+          </section>
+          <!--end of first section-->
+                <!-- modal -->
+        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <!--Content-->
+              <div class="modal-content container">
+                
+                <!-- Nav tabs -->
+            <ul class="nav nav-tabs row text-center bg-gray-600 text-white" role="tablist">
+              <li class="nav-item col-md-6 active">
+                <a class="nav-link hover:bg-gray-500" data-toggle="tab" href="#panel7" role="tab">
+                  Login</a>
+              </li>
+              <li class="nav-item col-md-6">
+                <a class="nav-link hover:bg-gray-300" data-toggle="tab" href="#panel8" role="tab">
+                  Register</a>
+              </li>
+            </ul>
+            
+            <div class="tab-content">
+              <!--Panel 7-->
+              <div class="tab-pane fade in active" id="panel7" role="tabpanel">
+    
+                <!--Body-->
+                <div class="modal-body container">
+                  <form class="loginpage" action = "/login_val">
+                    <!-- social pages -->
+                    <div class="social-title">
+                      <h2 class="title text-center font-bold text-3xl my-8 text-pink-600">Login with</h2>
+                      
+                        <div class="row block mx-auto w-3/6">
+                          <a class="col-xs-4 col-md-4 col-lg-4 hover:bg-gray-300 hover:shadow-sm" href="/login_with_google"><img src="{{ url_for('static', filename='img/gmail.png') }}"></a>
+                          <a class="col-xs-4 col-md-4 col-lg-4 hover:bg-gray-300 hover:shadow-sm" href="#"><img src="{{ url_for('static', filename='img/git.png') }}"></a>
+                          <a class="col-xs-4 col-md-4 col-lg-4 hover:bg-gray-300 hover:shadow-sm" href="#"><img src="{{ url_for('static', filename='img/linked.png') }}"></a>
+                        </div>
+                      </div>
+                    
+                    <h2 class="text-center text-3xl font-bold my-5 text-pink-600">or</h2>
+                    <!--login info-->
+                    <div class="row text-center text-3xl">
+                      <div class="username col-md-12">
+                        <span class="glyphicon glyphicon-envelope text-5xl text-gray-600 mr-12"></span>
+                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="email" placeholder="Enter your email" name = 'email'required="email">
+                      </div>
+  
+                      <div class="passowrd col-md-12 my-4">
+                        <span class="glyphicon glyphicon-lock text-5xl text-gray-600 mr-12"></span>
+                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="password" placeholder="Enter your password" name = "password" required="password"><br>                      
+                      </div>                     
+                    </div>
+                    <div class="checkbox">
+                      <label class="text-gray-700">
+                        <input type="checkbox" value="remember-me"><i> Remember me</i>
+                      </label>
+                    </div>
+                    <div class="text-right mb-8">
+                      <a class="text-gray-700" href="#"><i>forgot password?</i></a>
+                    </div>
+                  
+                  <div class="text-center">
+                    <button class="btn btn-success btn-lg bg-gray-700 text-white hover:bg-gray-800 hover:border hover:border-pink-600">Log in</button>
+  
+                  </div>
+                    <div class="modal-footer">
+                      <div class="text-center block mx-auto w-3/6">
+                        <p class="text-gray-700">Not a member? Sign up!</p>
+                      </div>
+                    </div>
+                    
+                  </form>
+                  </div>
+                  </div>
+                  <!--/.Panel 7-->
+    
+              <!--Panel 8-->
+              <div class="tab-pane fade" id="panel8" role="tabpanel">
+                <div class="modal-body container">
+                  <!-- body-->
+                  <form class = "signupform" method = "post" action = "/signup_val">
+                    <h2 class="text-center text-3xl font-bold my-8 text-pink-600">Sign up with us!</h2>
+                    <!--sign up info-->
+                    <div class="row block mx-auto w-3/6">
+                          <a class="col-xs-4 col-md-4 col-lg-4 hover:bg-gray-300 hover:shadow-sm" href="/signup_with_google"><img src="{{ url_for('static', filename='img/gmail.png') }}"></a>
+                          <a class="col-xs-4 col-md-4 col-lg-4 hover:bg-gray-300 hover:shadow-sm" href="#"><img src="{{ url_for('static', filename='img/git.png') }}"></a>
+                          <a class="col-xs-4 col-md-4 col-lg-4 hover:bg-gray-300 hover:shadow-sm" href="#"><img src="{{ url_for('static', filename='img/linked.png') }}"></a>
+                      </div>
+                      <h2 class="text-center text-3xl font-bold my-5 text-pink-600">or</h2>
+                    <div class="row text-center text-3xl">
+                      <div class="username col-md-12">
+                        <span class="glyphicon glyphicon-envelope text-gray-600 text-5xl mr-12"></span>
+                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="email" name = "email" placeholder="Enter email" required="email">
+                      </div>
+  
+                      <div class="passowrd col-md-12 my-4">
+                        <span class="glyphicon glyphicon-lock text-gray-600 text-5xl mr-12"></span>
+                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="password" name = "new_pass" placeholder="Enter password" required="password">
+                        
+                      </div>
+                      <div class="repeat-passowrd col-md-12 mt-4 mb-8">
+                        <span class="glyphicon glyphicon-lock text-5xl text-gray-600 mr-12"></span>
+                        <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="password" name = "con_pass" placeholder="Repeat password" required="password">                        
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <button class="btn btn-success btn-lg bg-gray-700 text-white hover:bg-gray-800 hover:border hover:border-pink-600">Sign up</button> 
+                    </div>
+                    <div class="modal-footer">
+                      <div class="text-center block mx-auto w-3/6">
+                      <p class="text-gray-700">Already a member? Log in!</p>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+              </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <!--modal closed-->
+           
         <!--<div class="second-section">
             <div class="header-svg-anim">
             </div>
@@ -50,10 +219,10 @@
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil consequuntur velit autem, laudantium et, reiciendis sint atque voluptatem labore ullam voluptates vel, nemo accusantium praesentium ut possimus perspiciatis architecto corrupti nam!</p>
             </div>
         </div>-->
-    </section>
+    
     <!-- Header Section End -->
 
-
+  	<i id="red" class="fa fa-user-circle" aria-hidden="true"></i>
     <!-- SECOND SECTION -->
     <section class="number-two">
         <div class="container">
@@ -130,13 +299,122 @@
         </div>
     </section>
     <!-- THIRD SECTION END -->
-
+<!--gear animation-->
+	
+	<div id="rotating"><!--positioning the whole animation-->
+	<div id="rotate">
+	<svg id="settings1" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M256,181c-41.353,0-75,33.647-75,75c0,41.353,33.647,75,75,75c41.353,0,75-33.647,75-75C331,214.647,297.353,181,256,181z
+			"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M512,298.305v-84.609l-69.408-13.667c-3.794-12.612-8.833-24.771-15.103-36.343l38.73-58.096l-59.81-59.81l-58.096,38.73
+			c-11.572-6.27-23.73-11.309-36.343-15.103L298.305,0h-84.609l-13.667,69.408c-12.612,3.794-24.771,8.833-36.343,15.103
+			L105.59,45.78l-59.81,59.81l38.73,58.096c-6.27,11.572-11.309,23.73-15.103,36.343L0,213.695v84.609l69.408,13.667
+			c3.794,12.612,8.833,24.771,15.103,36.343L45.78,406.41l59.81,59.81l58.096-38.73c11.572,6.27,23.73,11.309,36.343,15.103
+			L213.695,512h84.609l13.667-69.408c12.612-3.794,24.771-8.833,36.343-15.103l58.096,38.73l59.81-59.81l-38.73-58.096
+			c6.27-11.572,11.309-23.73,15.103-36.343L512,298.305z M256,361c-57.891,0-105-47.109-105-105s47.109-105,105-105
+			s105,47.109,105,105S313.891,361,256,361z"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+</div>>
+<!---second settings-->
+<div id="rotate1">
+	<svg id="settings2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M256,181c-41.353,0-75,33.647-75,75c0,41.353,33.647,75,75,75c41.353,0,75-33.647,75-75C331,214.647,297.353,181,256,181z
+			"/>
+	</g>
+</g>
+<g>
+	<g>
+		<path d="M512,298.305v-84.609l-69.408-13.667c-3.794-12.612-8.833-24.771-15.103-36.343l38.73-58.096l-59.81-59.81l-58.096,38.73
+			c-11.572-6.27-23.73-11.309-36.343-15.103L298.305,0h-84.609l-13.667,69.408c-12.612,3.794-24.771,8.833-36.343,15.103
+			L105.59,45.78l-59.81,59.81l38.73,58.096c-6.27,11.572-11.309,23.73-15.103,36.343L0,213.695v84.609l69.408,13.667
+			c3.794,12.612,8.833,24.771,15.103,36.343L45.78,406.41l59.81,59.81l58.096-38.73c11.572,6.27,23.73,11.309,36.343,15.103
+			L213.695,512h84.609l13.667-69.408c12.612-3.794,24.771-8.833,36.343-15.103l58.096,38.73l59.81-59.81l-38.73-58.096
+			c6.27-11.572,11.309-23.73,15.103-36.343L512,298.305z M256,361c-57.891,0-105-47.109-105-105s47.109-105,105-105
+			s105,47.109,105,105S313.891,361,256,361z"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+</div>
+<p id="quote">build,don't talk!make it simple but significant</p>
+</div>
 
     <!-- FOOTER -->
-    <footer>
+    <footer id="footer">
         <h3>The Open Source Society</h1>
         <p>Copyright © TOSS. All Rights Reserved.</p>
-        <div class="footer-icons">
+        <div   class="footer-icons">
             <a href="#"><i class='bx bxl-facebook-circle bx-md' style='color:#3862d8;'></i></a>
             <a href="#"><i class='bx bxl-linkedin-square bx-md' style='color:#2967d8'></i></a>
             <a href="#"><i class='bx bxl-instagram bx-md' style='color:#da4f79'></i></a>
@@ -144,19 +422,23 @@
         </div>
     </footer>
     <!-- FOOTER End -->
-
-
     <!-- Main JavaScript Files -->
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+     <script src="{{ url_for('static', filename='vendor/style.js') }}"></script>
+
     <!-- Vendor JavaScript Files -->
+
     <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>-->
     <script src="{{ url_for('static', filename='vendor/jquery.easing/jquery.easing.min.js') }}"></script>
     <script src="{{ url_for('static', filename='vendor/jquery-sticky/jquery.sticky.js') }}"></script>
     <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
     <!-- Initialising AOS (Animate on Scroll) -->
     <script>
         AOS.init();
+           
     </script>
 </body>
 </html>
