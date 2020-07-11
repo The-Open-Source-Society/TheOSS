@@ -15,15 +15,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
   
     <!-- Vendor CSS Files -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='vendor/icofont/icofont.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='vendor/boxicons/aos/aos.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css">
 
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css">
 </head>
 <body id="body">
   
@@ -57,6 +58,7 @@
                 </nav>
                 <button class="btn btn-primary btn-md btn-rounded bg-gray-700 text-white hover:bg-gray-800 hover:border-2 hover:border-pink-600" data-toggle="modal" data-target="#login">Login</button>
               </div>
+
               <div id="card1">
               <div  id="card2" class=" w-10 bg-blue-400 absolute z-0 shadow-2xl"></div>
               <div  id="card3" class=" w-24 bg-blue-400 absolute z-0 shadow-2xl"></div>
@@ -90,6 +92,7 @@
               </div></div>
             </div>
 	          <!--side navbar ends-->
+
           </section>
           <!--end of first section-->
                 <!-- modal -->
@@ -188,8 +191,9 @@
                         <span class="glyphicon glyphicon-lock text-gray-600 text-5xl mr-12"></span>
                         <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="password" name = "new_pass" placeholder="Enter password" required="password">
                         
-                      </div>
+                    
                       <div class="repeat-passowrd col-md-12 mt-4 mb-8">
+
                         <span class="glyphicon glyphicon-lock text-5xl text-gray-600 mr-12"></span>
                         <input class="w-3/5 border-gray-400 border-b hover:border-pink-500 hover:border-b outline-none text-gray-600" type="password" name = "con_pass" placeholder="Repeat password" required="password">                        
                       </div>
@@ -427,6 +431,8 @@
      <script src="{{ url_for('static', filename='vendor/style.js') }}"></script>
 
     <!-- Vendor JavaScript Files -->
+
+
 
     <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
