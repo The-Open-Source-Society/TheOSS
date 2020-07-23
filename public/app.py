@@ -48,6 +48,12 @@ def get_google_provider_cfg():
 def index():
     return render_template("index.html")
 
+
+@app.route("/team")
+def team():
+    return render_template("team.html")
+
+
 @app.route("/login_with_google")
 def logingoogle():
     google_provider_cfg = get_google_provider_cfg()
